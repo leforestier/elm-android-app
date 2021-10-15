@@ -1,0 +1,16 @@
+body {
+    background-color: #87CEEB;
+}
+
+div {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+}
+
+button {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 50%;
+}
