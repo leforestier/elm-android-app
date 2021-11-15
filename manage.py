@@ -86,6 +86,8 @@ class Project:
             os.makedirs(join('build', d), exist_ok=True)
 
     def elm_make(self):
+        if not os.path.exists('elm.json'):
+            quit_error("No elm.json file in the current directory. Please run `elm init`.")
         subprocess.check_call(['elm',
             'make', join('src', 'Main.elm'), '--output', join('assets', 'main.js')
         ])

@@ -11,7 +11,23 @@ You need to have installed:
 Starting a project
 ==================
 
-Simply clone this repo and then cd into it.
+Clone this repo and cd into it::
+
+    $ git clone https://github.com/leforestier/elm-android-app
+    $ cd elm-android-app
+
+Then run::
+
+    $ elm init
+
+That will create an ``elm.json`` file in the current directory.
+
+The entry point of your Elm application is ``src/Main.elm``.
+There is the code for a very basic counter app in that file, so that you can test that the build succeeds.
+
+Modify ``src/Main.elm`` and add other Elm source files to the ``src/`` directory to create a great app.
+
+To install additional elm packages, you can use ``elm install`` just like with any normal Elm project.
 
 Build script
 ============
@@ -19,11 +35,11 @@ Build script
 The script that enables you to build and/or install the app onto the device is ``manage.py``.
 It's a single Python script without any dependencies. You can call it like this on the command line::
 
-    $ python manage.py (see next section for commands available)
+    $ python manage.py (see next section for available commands)
 
 On Linux you should be able to do simply::
 
-    $ ./manage.py (see next section for commands available)
+    $ ./manage.py (see next section for available commands)
 
 
 To build an Elm application (running in a webview)
@@ -36,7 +52,7 @@ First, and this is something  you only have to do once per project, create a deb
 
     $ ./manage.py create-debug-key
 
-This create a keystore in the current directory under the file name ``debug.keystore``.
+This creates a keystore in the current directory under the file name ``debug.keystore``.
 
 Environment variables
 ---------------------
@@ -84,14 +100,18 @@ Changing the name of the application
 
 You change the name of the application exactly like you would in a normal Java only android application.
 
-The name displayed in the icon list of the device is the name you find in the ``AndroidManifest.xml`` in the
-``android:label`` attribute of the ``application`` tag. We've used ``"Elm App"`` as an example.
+The name of our example application is `Elm app` and our package name is ``com.example.elmwebviewapp``.
+Here's how to change it, for, say, a bird watching application called `Bird Watch` with package name ``net.birdwatchers.birdspot``.
 
-You can change the package name from the original example we've used (``com.example.elmwebviewapp``)
-to what you like (say ``net.birdwatchers.birdspot``) by renaming the directories ``java/com/example/elmwebviewapp`` to
-``java/net/birdwatchers/birdspot``, then replace the first line ``package com.example.elmwebviewapp;`` in ``MainActivity.java`` with
-``package net.birdwatchers.birdspot;``. Then replace the ``package="com.example.elmwebviewapp"`` manifest attribute in ``AndroidManifest.xml``
-with ``package="net.birdwatchers.birdspot"``
+To change the application name to `Bird Watch`:
+
+    - in ``AndroidManifest.xml`` replace ``android:label="Elm App"`` with  ``android:label="Bird Watch"``
+
+To change the package name to ``net.birdwatchers.birdspot``:
+
+    - rename the directory ``java/com/example/elmwebviewapp`` to ``java/net/birdwatchers/birdspot``
+    - in ``MainActivity.java``, replace the first line ``package com.example.elmwebviewapp;`` with ``package net.birdwatchers.birdspot;``
+    - in ``AndroidManifest.xml``, replace the ``package="com.example.elmwebviewapp"`` manifest attribute  with ``package="net.birdwatchers.birdspot"``
 
 Changing the icon of the application
 ====================================
