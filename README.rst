@@ -100,10 +100,10 @@ Changing the name of the application
 
 You change the name of the application exactly like you would in a normal Java only android application.
 
-The name of our example application is `Elm app` and our package name is ``com.example.elmwebviewapp``.
-Here's how to change it, for, say, a bird watching application called `Bird Watch` with package name ``net.birdwatchers.birdspot``.
+The name of our example application is "Elm App" and our package name is ``com.example.elmwebviewapp``.
+Here's how to change it, for, say, a bird watching application called "Bird Watch" with package name ``net.birdwatchers.birdspot``.
 
-To change the application name to `Bird Watch`:
+To change the application name to "Bird Watch":
 
     - in ``AndroidManifest.xml`` replace ``android:label="Elm App"`` with  ``android:label="Bird Watch"``
 
