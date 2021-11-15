@@ -23,9 +23,9 @@ Then run::
 That will create an ``elm.json`` file in the current directory.
 
 The entry point of your Elm application is ``src/Main.elm``.
-There is the code for a very basic counter app in that file, so that you can test that the build succeeds.
+This file contains a basic counter app that you can try to build to test that everything is working on your system.
 
-Modify ``src/Main.elm`` and add other Elm source files to the ``src/`` directory to create a great app.
+To create a great app, modify ``src/Main.elm`` and add other Elm source files to the ``src/`` directory .
 
 To install additional elm packages, you can use ``elm install`` just like with any normal Elm project.
 
