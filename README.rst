@@ -60,10 +60,10 @@ Environment variables
 You need to supply three environment variables to the script::
 
     - BUILD_TOOLS_DIR: the directory of the Android SDK where reside tools such as `aapt` and `dx`.
-      For example, I use `BUILD_TOOLS_DIR=/home/myusername/Android/Sdk/build-tools/29.0.0/`
+      For example, I use `BUILD_TOOLS_DIR=/home/myusername/Android/build-tools/30.0.3/`
 
     - PLATFORM_DIR: the directory of the Android SDK where reside `android.jar`.
-      For example I use `PLATFORM_DIR=/home/myusername/Android/Sdk/platforms/android-29/`
+      For example I use `PLATFORM_DIR=/home/myusername/Android/platforms/android-30/`
 
     - KEYSTORE_FILE: the keystore file. If you created it by `manage.py create-debug-keystore`,
       then the file is `debug.keystore` and you should use `KEYSTORE_FILE=debug.keystore`
