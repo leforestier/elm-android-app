@@ -36,7 +36,7 @@ class Project:
         except KeyError:
             quit_error(
                 "You need to supply a BUILD_TOOLS_DIR environment variable.\n"
-                "Example: BUILD_TOOLS_DIR=/home/user/Android/Sdk/build-tools/29.0.0/"
+                "Example: BUILD_TOOLS_DIR=/home/myusername/Android/build-tools/30.0.3/"
             )
 
         if not os.path.isdir(build_tools_dir):
@@ -46,7 +46,7 @@ class Project:
         except KeyError:
             quit_error(
                 "You need to supply a PLATFORM_DIR environment variable.\n"
-                "Example: PLATFORM_DIR=/home/user/Android/Sdk/platforms/android-29/"
+                "Example: PLATFORM_DIR=/home/myusername/Android/platforms/android-30/"
             )
 
         if not os.path.isdir(platform_dir):
@@ -147,8 +147,8 @@ class Project:
         except FileNotFoundError:
             quit_error(
                 "Couldn't find your `adb` executable."
-                " You probably need to add the"
-                " .../Sdk/platform-tools/ directory to your PATH."
+                " You probably need to add the `platform-tools` directory"
+                " of the Android Sdk to your PATH."
             )
 
     def install(self):
