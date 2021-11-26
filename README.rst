@@ -131,3 +131,25 @@ Then::
 This is just a shortcut for::
 
     $ elm-live src/Main.elm -d assets -- --output=assets/main.js
+
+Gestures and touch events
+=========================
+
+You'll probably want to handle events such as swipes, presses, rotations, pinches etc...
+
+To be able to use event attributes such as ``onSwipe``, ``onSwipeLeft``, ``onPress``, ``onPinch``...
+just as easily as you would use ``onClick``, I published a helper library that you can install:
+
+    `leforestier/elm-hammer-events <https://package.elm-lang.org/packages/leforestier/elm-hammer-events/latest/>`_
+
+This helper library relies on the excellent `Hammer.js <https://hammerjs.github.io>`_
+Javascript library : it's just a single
+file `hammer.min.js <https://hammerjs.github.io/dist/hammer.min.js>`_
+to add to your ``assets`` directory.
+
+
+Alternatively, if you want to deal
+with `HTML5 touch events <https://developer.mozilla.org/en-US/docs/Web/API/Touch_events>`_
+directly, you can use the
+
+    `Html.Events.Extra.Touch <https://package.elm-lang.org/packages/mpizenberg/elm-pointer-events/latest/Html-Events-Extra-Touch>`_ module from `mpizenberg/elm-pointer-events <https://package.elm-lang.org/packages/mpizenberg/elm-pointer-events/>`_
